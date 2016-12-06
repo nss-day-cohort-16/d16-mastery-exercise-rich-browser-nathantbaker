@@ -1,3 +1,25 @@
+## How to Run This Project
+
+In the root folder, run `npm install`.
+
+This will download dependencies, open [http://localhost:9966/webpack-dev-server/](http://localhost:9966/webpack-dev-server/) where the app will load in a few seconds, and boot up `webpack-dev-server` for you.
+
+## Developement Environment
+This app uses [Webpack](https://webpack.github.io/) to modularize code and automate tasks. NPM scripts are configured in the `package.json` file. They are being used so you can easily access commands of local node modules without having to install anything globally. Webpack is being configured in `webpack.config.js`.
+
+### Webpack Dev Server
+In this project, the Webpack Dev Server is configured to live-reload changes you make. It creates the latest version of the app on the fly, even though it does **not** compile code.
+* **`npm start`** Start Webpack Dev Server and be send to the URL where the app loads
+* **`npm stop`** Stop Webpack Dev Server
+* **`npm restart`** Stop and then start Webpack Dev Server
+
+### Compile Code
+* **`npm run compile`** Compile once to see changes live reload in Webpack Dev Server
+* **`npm run watch`** Compile continuously to see changes live reload in Webpack Dev Server
+
+### Linting
+`jshint` runs in the background and will halt watch functionality until code is lint free. You can supress specific errors across the project in the `js/.jshintrc` file.
+
 # Toy Consignment Shop
 
 You are going to create an application for a consignment store specializing in children's toys. Use Google image search to find some toys for your store.
@@ -33,14 +55,14 @@ Create a basic view that shows the toy name as a title, the toy image, and the p
 
 ### Add / delete toy
 
-Create a form for addding a new toy to Firebase. Make sure the form fields match the format you defined in your toys collection.  
+Create a form for addding a new toy to Firebase. Make sure the form fields match the format you defined in your toys collection.
 
 You will also need to add a button to each toy that allows the user to delete it from the list and from Firebase.
 
 ## Stretch goals
-1. Add a form for editing a toy and saving the changes.   
-2. Create a form for registering/logging in a user. 
-3. When the signed-in user adds a toy to Firebase, save the user id to the toy. 
-4. Allow the user to view only toys he/she added to the db.  
+1. Add a form for editing a toy and saving the changes.
+2. Create a form for registering/logging in a user.
+3. When the signed-in user adds a toy to Firebase, save the user id to the toy.
+4. Allow the user to view only toys he/she added to the db.
 
 
