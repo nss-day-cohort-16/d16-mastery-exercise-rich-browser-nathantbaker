@@ -24,7 +24,7 @@ module.exports = {
   resolve: {
     alias: {
       // used when requiring jquery in modules
-      'jquery-path': '../node_modules/jquery/src/jquery.js'
+      'jquery-path': '../../node_modules/jquery/src/jquery.js'
     }
   }
 };

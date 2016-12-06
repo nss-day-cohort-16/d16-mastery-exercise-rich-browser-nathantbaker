@@ -1,6 +1,7 @@
 'use strict';
 
 // Requires
-require("./toy-list");
-require("./toy-details");
-require("./toy-edit");
+require("./views/toy-list");
+require("./views/toy-details");
+require("./views/toy-edit");
+require("./data/firebase");

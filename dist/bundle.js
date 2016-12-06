@@ -105,7 +105,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background: #ccc; }\n\n.container {\n  background-color: #f4f3ed;\n  border-radius: 0 0 10px 10px;\n  padding: 10px 20px 20px 20px;\n  border: #ccc 1px solid;\n  box-shadow: 1px 2px 5px #ccc; }\n\n#teddy {\n  width: 80px; }\n", ""]);
+	exports.push([module.id, "body {\n  background: #ccc; }\n\n.header {\n  background: #444;\n  padding: 20px; }\n\n.header h1 {\n  color: pink;\n  font-weight: 300; }\n\n#teddy {\n  width: 80px; }\n", ""]);
 
 	// exports
 
@@ -425,9 +425,10 @@
 	'use strict';
 
 	// Requires
-	__webpack_require__(109);
 	__webpack_require__(7);
 	__webpack_require__(108);
+	__webpack_require__(109);
+	__webpack_require__(110);
 
 /***/ },
 /* 7 */
@@ -438,7 +439,7 @@
 	// Requires
 	__webpack_require__(8);
 
-	$("#entry").append("Toy Details | ");
+	$("#entry").append("Toy List | ");
 
 /***/ },
 /* 8 */
@@ -12031,7 +12032,7 @@
 	// Requires
 	__webpack_require__(8);
 
-	$("#entry").append("Edit Toys");
+	$("#entry").append("Toy Details | ");
 
 /***/ },
 /* 109 */
@@ -12042,7 +12043,19 @@
 	// Requires
 	__webpack_require__(8);
 
-	$("#entry").append("Toy List | ");
+	$("#entry").append("Edit Toys");
+
+/***/ },
+/* 110 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	// Requires
+	// let firebase = require("firebaseConfig.js");
+	__webpack_require__(8);
+
+	$("#entry").append("|  Firebase | ");
 
 /***/ }
 /******/ ]);
