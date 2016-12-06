@@ -3,4 +3,4 @@
 // Requires
 require('jquery-path');
 
-$("#entry").html("hello world");
+$("#entry").append("Toy List | ");

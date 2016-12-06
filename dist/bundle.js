@@ -425,7 +425,9 @@
 	'use strict';
 
 	// Requires
+	__webpack_require__(109);
 	__webpack_require__(7);
+	__webpack_require__(108);
 
 /***/ },
 /* 7 */
@@ -436,7 +438,7 @@
 	// Requires
 	__webpack_require__(8);
 
-	$("#entry").html("hello world");
+	$("#entry").append("Toy Details | ");
 
 /***/ },
 /* 8 */
@@ -12019,6 +12021,28 @@
 
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
+
+/***/ },
+/* 108 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	// Requires
+	__webpack_require__(8);
+
+	$("#entry").append("Edit Toys");
+
+/***/ },
+/* 109 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	// Requires
+	__webpack_require__(8);
+
+	$("#entry").append("Toy List | ");
 
 /***/ }
 /******/ ]);

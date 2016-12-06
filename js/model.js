@@ -1,4 +1,6 @@
 'use strict';
 
 // Requires
-require("./view");
+require("./toy-list");
+require("./toy-details");
+require("./toy-edit");
