@@ -428,7 +428,16 @@
 	__webpack_require__(7);
 	__webpack_require__(108);
 	__webpack_require__(109);
-	__webpack_require__(110);
+	let data = __webpack_require__(110);
+
+
+	data.getToys().then(function(toyData) {
+	  console.log("toy data:", toyData);
+	  }, function(reason) {
+	  console.log("nope");
+	});
+
+
 
 /***/ },
 /* 7 */
@@ -12056,28 +12065,18 @@
 	let firebase = __webpack_require__(111);
 	// require("./views/toy-edit");
 
-
-	// Requires
-	// let $ = require('jquery'),
-	//   firebase = require("./firebaseConfig");
-
-	// let firebaseTestFunction = () => "I was created in the Firebase file";
-
-
-	// // ****************************************
-	// // DB interaction using Firebase REST API
-	// // ****************************************
+	function getToys() {
+	  return new Promise(function(resolve, reject) {
+	    $.ajax ({
+	      url: `https://toy-shop-f3148.firebaseio.com/toys.json`
+	    }).done (function(toyData) {
+	      resolve(toyData);
+	    });
+	  });
+	}
 
 
-	// function getMovies(user) {
-	//   return new Promise(function(resolve, reject) {
-	//     $.ajax ({
-	//       url: `https://scrappy-eb326.firebaseio.com/movies.json?orderBy="uid"&equalTo="${user} "`
-	//     }).done (function(movieData) {
-	//       resolve(movieData);
-	//     });
-	//   });
-	// }
+
 
 	// // adds a new movie, in the form of an object, to the collection
 	// function addMovie(movieFormObj) {
@@ -12135,14 +12134,9 @@
 	//   });
 	// }
 
-	// module.exports = {
-	//   firebaseTestFunction,
-	//   getMovies,
-	//   addMovie,
-	//   getMovie,
-	//   deleteMovie,
-	//   editMovie
-	// };
+	module.exports = {
+	  getToys
+	};
 
 /***/ },
 /* 111 */

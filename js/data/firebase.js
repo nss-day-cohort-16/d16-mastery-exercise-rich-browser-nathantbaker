@@ -5,28 +5,18 @@ require('jquery-path');
 let firebase = require("./firebaseConfig.js");
 // require("./views/toy-edit");
 
-
-// Requires
-// let $ = require('jquery'),
-//   firebase = require("./firebaseConfig");
-
-// let firebaseTestFunction = () => "I was created in the Firebase file";
-
-
-// // ****************************************
-// // DB interaction using Firebase REST API
-// // ****************************************
+function getToys() {
+  return new Promise(function(resolve, reject) {
+    $.ajax ({
+      url: `https://toy-shop-f3148.firebaseio.com/toys.json`
+    }).done (function(toyData) {
+      resolve(toyData);
+    });
+  });
+}
 
 
-// function getMovies(user) {
-//   return new Promise(function(resolve, reject) {
-//     $.ajax ({
-//       url: `https://scrappy-eb326.firebaseio.com/movies.json?orderBy="uid"&equalTo="${user} "`
-//     }).done (function(movieData) {
-//       resolve(movieData);
-//     });
-//   });
-// }
+
 
 // // adds a new movie, in the form of an object, to the collection
 // function addMovie(movieFormObj) {
@@ -84,11 +74,6 @@ let firebase = require("./firebaseConfig.js");
 //   });
 // }
 
-// module.exports = {
-//   firebaseTestFunction,
-//   getMovies,
-//   addMovie,
-//   getMovie,
-//   deleteMovie,
-//   editMovie
-// };
+module.exports = {
+  getToys
+};
