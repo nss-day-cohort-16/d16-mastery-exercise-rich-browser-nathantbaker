@@ -3,6 +3,7 @@ $header: #444;
 
 body {
   background: $background;
+  min-width: 400px;
 }
 
 .header {
@@ -13,11 +14,13 @@ body {
 .header h1 {
   color: pink;
   font-weight: 300;
+  font-size: 3em;
 }
 
 .container {
 }
 
 #teddy {
-  width: 80px;
+  width: 100px;
+  padding: 10px 30px 0 0;
 }
